@@ -58,6 +58,10 @@ See `docs/thresholds_of_care.md` for the care thresholds that ground the model.
 
 See `docs/system_diagram.md` for a single diagram of the access → recognition → care → action → repair flow.
 
+## Nursing and public health brief
+
+See `docs/enfermeria_intersistemica_reporte.md` for a plain-language report connecting Relational Cybersecurity with Inter-systemic Nursing practice.
+
 ## Hackathon context (Techinance Cyberhack 2)
 
 See `docs/hackathon.md` for the challenge summary, how this MVP responds, and a short demo plan.
