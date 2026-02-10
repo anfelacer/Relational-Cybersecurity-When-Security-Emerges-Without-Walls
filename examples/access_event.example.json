@@ -1,0 +1,32 @@
+[
+  {
+    "event_id": "AE-CARE-001",
+    "occurred_at": "2024-05-10T14:30:00Z",
+    "actor_role": "clinic_data_steward",
+    "resource": "community_health_dataset",
+    "purpose": "Prepare aggregated indicators for harm reduction briefing.",
+    "action": "read",
+    "data_subject": "community_members_aggregated",
+    "care_license": {
+      "license_id": "CL-CARE-2024-01",
+      "purpose": "Support public health planning with minimum necessary data.",
+      "obligations": [
+        "Use aggregated outputs only",
+        "Avoid re-identification attempts",
+        "Share findings with care team for feedback"
+      ],
+      "issued_by_role": "ethics_coordination",
+      "issued_at": "2024-05-01T09:00:00Z",
+      "expires_at": "2024-12-31T23:59:59Z"
+    }
+  },
+  {
+    "event_id": "AE-INCIDENT-002",
+    "occurred_at": "2024-05-12T16:10:00Z",
+    "actor_role": "external_vendor_support",
+    "resource": "outreach_contact_registry",
+    "purpose": "Troubleshoot import errors during data migration.",
+    "action": "export",
+    "data_subject": "community_member_anonymized"
+  }
+]
