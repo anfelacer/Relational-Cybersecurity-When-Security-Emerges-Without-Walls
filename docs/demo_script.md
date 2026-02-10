@@ -1,74 +1,60 @@
-# 90‑Second Demo Script — Relational Cybersecurity
+# Guion de Video (90 segundos) — Ciberseguridad Relacional
 
-🌐 **Bilingual note / Nota bilingüe**  
-This document is intentionally written in both **English and Spanish**.  
-Language here is not cosmetic: it is part of the security model.  
-Este documento está escrito intencionalmente en **inglés y español**.  
-El lenguaje no es decorativo: hace parte del modelo de seguridad relacional.
+Este guion está pensado para hablar en lenguaje común, con claridad para personas técnicas y no técnicas.
 
-## Español (guion sugerido)
+## Versión principal (Español, lenguaje común)
 
-**0–10s — Apertura (problema + tesis)**  
-“La seguridad no nace del muro; el muro crea puntos ciegos.  
-En Ciberseguridad Relacional, la seguridad emerge de lo que ocurre cuando hay acceso.”
+**0–10s — Bienvenida y idea central**  
+“Hola, este proyecto muestra una idea simple: la seguridad no depende de esconder datos detrás de muros.  
+La seguridad depende de qué pasa cuando alguien accede.”
 
 **10–25s — Flujo en 5 pasos**  
-“El flujo es: Acceso → Reconocimiento → Licencia de Cuidado → Acción → Reparación.  
-No registramos para vigilar, registramos para cuidar.”
+“Trabajamos con este flujo:  
+Acceso → Reconocimiento → Licencia de cuidado → Acción → Reparación.  
+No registramos para vigilar, registramos para cuidar y responder.”
 
-**25–45s — Mostrar ejemplos**  
-“Aquí hay dos AccessEvent: uno con licencia y otro sin licencia.  
-El evento sin licencia no se oculta: se reconoce como incidente y exige reparación.”
+**25–40s — Mostrar ejemplos JSON**  
+“Aquí tenemos dos ejemplos de acceso:  
+uno con licencia de cuidado y otro sin licencia.  
+Cuando falta la licencia, el sistema lo reconoce como incidente.”
 
-**45–65s — Ejecutar el validador**  
-Ejecuta:  
+**40–60s — Ejecutar validación**  
+“Ahora corro el validador para revisar estructura y coherencia ética.”
+
 ```bash
 python src/validate.py
-```  
-“El validador confirma el evento cuidado y detecta el incidente.  
-Si existe RepairCase correspondiente, el sistema sigue siendo ‘OK’.”
+```
 
-**65–80s — (Opcional) CLI en vivo**  
-Ejecuta:  
+“Si el incidente tiene su RepairCase asociado, el sistema cierra en OK.  
+La idea no es castigar: es garantizar reparación.”
+
+**60–78s — (Opcional) CLI en vivo**  
+“También podemos registrar eventos en vivo con la CLI.”
+
 ```bash
 python src/ledger_cli.py record --actor-role caretaker --resource community_dataset --purpose "Care review of access log" --action read --data-subject community_member_anonymized
 python src/ledger_cli.py status
-```  
-“Aquí vemos un evento en vivo y el indicador de tensión relacional.”
+```
 
-**80–90s — Cierre**  
-“Cuando el muro desaparece, la responsabilidad aparece.  
-Eso es seguridad relacional: cuidado, trazabilidad y reparación.”
+“Aquí vemos el registro y el indicador de tensión relacional.”
 
-## English (optional)
+**78–90s — Cierre**  
+“Este MVP propone seguridad como acuerdo de cuidado:  
+si hay acceso, hay responsabilidad; si hay daño, hay reparación.”
 
-**0–10s — Opening**  
-“Security does not come from walls; walls create blind spots.  
-Relational Cybersecurity focuses on what happens when access occurs.”
+---
 
-**10–25s — 5‑step flow**  
-“Flow: Access → Recognition → Care License → Action → Repair.  
-We log to enable care, not surveillance.”
+## Versión corta (30 segundos)
 
-**25–45s — Examples**  
-“Two AccessEvents: one with a Care License, one without.  
-Missing care is treated as an incident that requires repair.”
+“Este MVP muestra que la seguridad no nace del muro, sino de la responsabilidad cuando hay acceso.  
+Usamos tres componentes: registro de acceso, licencia ética de cuidado y caso de reparación.  
+Si falta licencia, se reconoce incidente y se exige reparación.  
+Por eso, la seguridad aquí es cuidado trazable, no vigilancia.”
 
-**45–65s — Validator**  
-Run:  
-```bash
-python src/validate.py
-```  
-“The validator confirms care, detects the incident, and verifies repair.”
+---
 
-**65–80s — (Optional) Live CLI**  
-Run:  
-```bash
-python src/ledger_cli.py record --actor-role caretaker --resource community_dataset --purpose "Care review of access log" --action read --data-subject community_member_anonymized
-python src/ledger_cli.py status
-```  
-“We see a live event and the relational tension indicator.”
+## Optional English summary (for Q&A)
 
-**80–90s — Close**  
-“When the wall disappears, responsibility appears.  
-That is relational security: care, traceability, repair.”
+“Relational Cybersecurity treats access as inevitable and makes responsibility explicit.  
+Flow: Access → Recognition → Care License → Action → Repair.  
+Missing care is treated as an incident, and repair is required for a coherent OK.”

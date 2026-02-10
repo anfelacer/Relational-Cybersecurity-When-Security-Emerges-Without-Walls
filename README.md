@@ -66,6 +66,10 @@ See `docs/hackathon.md` for the challenge summary, how this MVP responds, and a 
 
 See `docs/status_and_next_steps.md` for a concise explanation of what is complete and what remains as optional phase 2 work.
 
+## Notebook welcome note
+
+See `docs/notebook_welcome.md` for a bilingual EN/ES welcome text to introduce your notebook demo.
+
 ## Demo script (90 seconds)
 
 See `docs/demo_script.md` for a 90‑second narration + command sequence for the video demo.
