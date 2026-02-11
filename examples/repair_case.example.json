@@ -1,0 +1,27 @@
+{
+  "case_id": "RC-INCIDENT-002",
+  "related_access_event_id": "AE-INCIDENT-002",
+  "reported_by_role": "care_accountability_lead",
+  "incident_summary": "Access occurred without a Care License for an export action.",
+  "repair_steps": [
+    {
+      "step": "Notify data custodians and pause external export activity.",
+      "owner_role": "security_response",
+      "status": "done"
+    },
+    {
+      "step": "Review access scope and confirm no personal identifiers left the system.",
+      "owner_role": "privacy_review_team",
+      "status": "in_progress"
+    },
+    {
+      "step": "Issue a Care License or revoke access privileges.",
+      "owner_role": "ethics_coordination",
+      "status": "pending"
+    }
+  ],
+  "status": "open",
+  "created_at": "2024-05-12T17:00:00Z",
+  "urgency_level": "high",
+  "integrity_hash": "7f4ed358cbc7af183a040093f99de8263fb4d3172d96fd5e41e5e44cdeaa8ae0"
+}

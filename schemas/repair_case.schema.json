@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/schemas/repair_case.schema.json",
+  "title": "RepairCase",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "case_id",
+    "related_access_event_id",
+    "reported_by_role",
+    "incident_summary",
+    "repair_steps",
+    "status",
+    "created_at"
+  ],
+  "properties": {
+    "case_id": {
+      "type": "string",
+      "pattern": "^RC-[A-Z0-9-]+$"
+    },
+    "related_access_event_id": {
+      "type": "string",
+      "pattern": "^AE-[A-Z0-9-]+$"
+    },
+    "reported_by_role": {
+      "type": "string",
+      "minLength": 3,
+      "description": "Role reporting the incident."
+    },
+    "incident_summary": {
+      "type": "string",
+      "minLength": 8
+    },
+    "repair_steps": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["step", "owner_role", "status"],
+        "properties": {
+          "step": {
+            "type": "string",
+            "minLength": 3
+          },
+          "owner_role": {
+            "type": "string",
+            "minLength": 3
+          },
+          "status": {
+            "type": "string",
+            "enum": ["pending", "in_progress", "done"]
+          }
+        }
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": ["open", "in_progress", "closed"]
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "urgency_level": {
+      "type": "string",
+      "enum": ["low", "medium", "high", "critical"],
+      "description": "Urgency based on care thresholds."
+    },
+    "integrity_hash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$",
+      "description": "Integrity hash for the repair case."
+    }
+  }
+}

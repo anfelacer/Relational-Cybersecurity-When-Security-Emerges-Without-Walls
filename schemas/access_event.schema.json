@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/schemas/access_event.schema.json",
+  "title": "AccessEvent",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "event_id",
+    "occurred_at",
+    "actor_role",
+    "resource",
+    "purpose",
+    "action",
+    "data_subject"
+  ],
+  "properties": {
+    "event_id": {
+      "type": "string",
+      "pattern": "^AE-[A-Z0-9-]+$"
+    },
+    "occurred_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "actor_role": {
+      "type": "string",
+      "minLength": 3,
+      "description": "Role-based identity only (no personal data)."
+    },
+    "resource": {
+      "type": "string",
+      "minLength": 3,
+      "description": "What is accessed (system, dataset, record)."
+    },
+    "purpose": {
+      "type": "string",
+      "minLength": 8,
+      "description": "Why the access is occurring."
+    },
+    "action": {
+      "type": "string",
+      "minLength": 3,
+      "description": "Action performed (read, update, export, etc.)."
+    },
+    "data_subject": {
+      "type": "string",
+      "minLength": 3,
+      "description": "Anonymized subject reference that the data represents."
+    },
+    "care_license": {
+      "$ref": "care_license.schema.json"
+    }
+  }
+}
